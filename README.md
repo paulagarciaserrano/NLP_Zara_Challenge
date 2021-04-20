@@ -63,7 +63,7 @@ The predictions look like this:
 
 <a href="https://www.linkpicture.com/view.php?img=LPic607f124ecd0eb1799119600"><img src="https://www.linkpicture.com/q/RESULTS.png" type="image"></a>
 
-If you want to take a whole look at them, take a look at the 
+If you want to take a whole look at them, take a look at the pred_vs_actual.csv in the repository.
 
 ## 4. Conclusion
 
