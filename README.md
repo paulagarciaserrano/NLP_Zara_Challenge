@@ -41,23 +41,29 @@ Lastly, we tried our last attempt, another pre-trained model, and we chose the T
 
 ### 2.4. Results
 
+As for the results, as explained in the section above, we need to say that nearly none of the models were considered to be even performing. Regarding the first model described, the encoder-decoder using LSTMs, showed no learning at all, as the loss of the model would not decrease throughout the iterations. Something similar happened with our second experiment, an encoder-decoder with more layers, it did not learn either.
 
+Furthermore, regarding the third experiment, the Bert encoder-decoder, this seemed to learn, but when predicting, it was only able to predict the first token of the sentence, and all of the rest were constant, and not correct. Moving onto the next pre-trained that we tried, we are not able to report results, as we did not have the computational power to evaluate this model, as it had an expected evaluation time of 40 hours.
+
+Lastly, regarding our fifth experiment, the pre-trained T5, it was the the only model that we computed the Rouge score, as it was the only one we could correctly train. The results for this were: 
+
+* ROGUE-1 {f: 0.21, p: 0.23, r:  0.24}
+* ROGUE-2 { f: 0.05, p: 0.05, r: 0.06}
+* ROGUE-L { f: 0.21 , p: 0.23, r: 0.23}
 
 ## 3. Analysis
 
-Previous to the results, the team thinks that it is important for the reader to notice that for the cases where tokens occurred once or twice in the whole product description collection (e.g. _Disney_), we decided to not include them in the vocabulary, as this was biasing the results.
+Previous to analyzing the results, the team thinks that it is important for the reader to notice that for the cases where tokens occurred once or twice in the whole product description collection (e.g. _Disney_), we decided to not include them in the vocabulary, as this was biasing the results.
 
 Generally speaking, the model was able to make predictions; in many instances, it predicted the exact word which had to be predicted just like in the test dataset yet as for the overall structure of the predicted sentence, the model failed to predict the exact match. Based on the scoring, from the ROGUE metric, we can see that the overlaps of unigrams (ROGUE-1) and bigrams (ROGUE-2) of the predictions were poor compared to the actual results. 
 
 During the modelling, we have come across the problem of overtraining. Moreover, comparing the predicted product name to the actual one, we saw that our model had difficulties predicting long text.
 
-The rouge results from the model were:
-
-<a href="https://www.linkpicture.com/view.php?img=LPic607f12af5061a745037501"><img src="https://www.linkpicture.com/q/rouge_scores.png" type="image"></a>
-
-And the predictions look like:
+The predictions look like this:
 
 <a href="https://www.linkpicture.com/view.php?img=LPic607f124ecd0eb1799119600"><img src="https://www.linkpicture.com/q/RESULTS.png" type="image"></a>
+
+If you want to take a whole look at them, take a look at the 
 
 ## 4. Conclusion
 
