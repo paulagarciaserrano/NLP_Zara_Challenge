@@ -1,5 +1,7 @@
 # NLP Zara Challenge
 
+A project by Sergi Abashidze, Paula García, Reem Hageali and Sidhant Singhal.
+
 ## Abstract
 
 Text summarization is the process of producing concise summaries while preserving significant information. In this project, we investigate the issue of summarizing product titles for Zara given the product description. With the increase in the e-commerce platforms, it is necessary to compress products’ titles for consumer’s convenience. Throughout this paper, we evaluated 5 different models, and the best one turned out to be the  T5ForConditionalGeneration, a state of the art pre-trained generative model. It is an encoder-decoder model and converts all natural language processing problems into text-to-text format. However, the data at hand had a few factors that impacted the model performance, resulting in poor predictions. The product titles included some words that were not present in the description, and there were also some spelling errors in both the product name and description. We were able to tweak the model to gain predictions that were satisfactory after many iterations. 
